@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Saving Caliculator</title>
+        <style>
+        body{
+            font-family: Arial;
+            background-color: slategray;
+            text-align: center;
+            width: auto;
+        }
+        footer{
+            font-size: 80%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        </style>
+        <script type="text/javascript">
+
+        function howManyYears()
+        {        
+            var start = parseInt(prompt("Write your saving money:  (Replace sample number)", "1000"));
+            var goal =  parseInt(prompt("Write your goal:  (Replace sample number)", "15000"));
+            var interest = parseFloat(prompt("Write interest rate : (sample 4% / year = 1.04)", "1.04"));
+            var year = 0;
+
+            if (start && goal && interest != null)
+            {
+                for( i = start ; i <= goal; i *= interest)                
+                year++;
+                return alert("\n It takes " +  
+                + year + " years!   for your savings " + start + " to reach " 
+                + goal + " \n\n Interest rate " + interest );  
+            }
+            else
+            {
+                return alert(" Not a valid number ")
+            }
+            
+        }
+        </script>
+    </head>
+    <body>
+        <div>
+        <h2>JavaScript - Saving Caliculator</h2>
+       
+            <form>   
+                <label for="caliculate"> Click to Start!</label>
+                <input type="button" value="Caliculate Years" onclick="howManyYears()">
+            </form>
+
+            </script>
+        </div>
+    </body>
+    <footer>
+        <p>Created by<a href= "https://www.boverock.se/">www.boverock.se</a></p>
+    </footer>
+</html>

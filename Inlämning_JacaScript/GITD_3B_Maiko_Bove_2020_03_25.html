@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>   
+        <title>Your Climate</title>
+        <style>
+            body{
+                font-family: Arial;
+                background-color: slategray;
+                text-align: center;
+                width: auto;
+            }
+            footer{
+                font-size: 80%;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+            </style>
+
+    </head>
+    <body>
+        <div>
+            <h2>JavaScript - Check your climate!</h2>
+            <p>Refresh to Start!</p>
+        </div> 
+        <script type="text/javascript">
+            let hot= confirm(" \n Is it HOT?" + "\n\n  "+"YES == Press OK"+ "   NO == Press Cancel");
+            let rain= confirm (" \n Is it Raining?" + "\n\n  "+"YES == Press OK"+ "   NO == Press Cancel") 
+
+                if(hot == true && rain == true)
+                {
+                alert("\n  Your weather: \n\n  Hot and Raining == Tropical climate!");
+                }
+                
+                else if(hot == true && rain == false)
+                {
+                alert("\n  Your weather: \n\n  Hot and Not Raining == Desert!");
+                }
+
+                else if (hot == false && rain == true)
+                {
+                alert("\n Your weather: \n\n  Cold and Raining == Welcome to Scandinavia! ");
+                }
+
+                else if (hot == false && rain == false)
+                {
+                alert("\n Your weather: \n\n Cold and No Rain == Tundra! ");
+                }
+
+
+        </script>
+    </body>
+    <footer>
+        <p>Created by<a href= "https://www.boverock.se/">www.boverock.se</a></p>
+    </footer>
+</html>
+
+

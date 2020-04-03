@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: Arial;
+                background-color: slategray;
+                text-align: center;
+                width: auto;
+            }
+            footer{
+                font-size: 80%;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+        <Title>Temperature Converter</Title>
+        <script type="text/javascript">
+        // (20°C × 9/5) + 32 = 68°F
+        //  (68°F − 32) × 5/9 = 20°C
+        
+            function Add(a,b)
+            {   
+                return  a + b;
+            }
+
+            function Sub(c,d)
+            {
+                return c - d ;
+            }
+            
+            function Mul(e,f)
+            {
+                return e * f;
+            }
+
+            function Div(g,h)
+            {
+                return g/h;
+            }
+
+            function CToF(x)
+            {
+                var x = parseFloat(prompt("Celsius (C°):  (Replace sample number)", "20"));
+                
+                if(!isNaN(x))
+                {
+                var step1 = Mul(x,9);
+                var step2 = Div(step1,5);
+                var result_f = Add(step2,32);
+
+                return  alert("\n Temperature: \n\n " + x +"C° =  " + result_f + "F° \n\n" +
+                "Formula: (C° × 9/5) + 32 = F°");       
+                }
+                
+                else
+                {
+                    return alert(" Not a valid number ");
+                }    
+            }
+            
+            function FToC(y)      
+            {        
+                var y = parseFloat(prompt("Fahrenheit (F°):  (Replace sample number)", "68"));
+                
+                if(!isNaN(y))
+                {
+                var stepa = Sub(y,32);
+                var stepb = Div(stepa, 9);
+                var result_c = Mul(stepb, 5); 
+                
+                return  alert("\nTemperature: \n\n " + y +"F° =   " + result_c + "C° \n\n"+
+                " Formula: (F° − 32) × 5/9 = C°");
+                }
+                
+                else
+                {
+                    return alert(" Not a valid number ");
+                }
+            }             
+        </script>
+    </head>
+    <body>
+        <div>
+        <h2>JavaScript - Celsius / Fahrenheit - Converter</h2>
+        <h3>Click to Caliculate!</h3>      
+        <input type="button" value="Celsius(C°) to Fahrenhiet (F°) " onclick="CToF()"/>
+        <input type="button" value="Fahrenheit (F°) to Celsius (C°)" onclick="FToC()"/> 
+        </div>    
+    </body>
+    <footer>
+        <p>Created by<a href= "https://www.boverock.se/">www.boverock.se</a></p>
+    </footer>
+</html>          
+

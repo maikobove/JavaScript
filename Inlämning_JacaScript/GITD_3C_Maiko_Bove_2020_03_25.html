@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Odd or Even</title>
+        <style>
+        body{
+            font-family: Arial;
+            background-color: slategray;
+            text-align: center;
+            width: auto;
+        }
+        footer{
+            font-size: 80%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>JavaScript - Sum Odd or Even</h2>
+            <p>Refresh to Start!</p>
+        </div>   
+        <script type="text/javascript">
+            var x = parseInt(prompt("Write your number x:", "number x"));
+            var y = parseInt(prompt("Write your number y:", "number y"));
+
+            var sum = x+y;
+          
+            if(!isNaN(sum), sum%2 == 0)
+            {
+            alert(" Sum : x + y = " + sum +  "   Number is even!");
+            }
+
+            else if(!isNaN(sum), sum%2 >0)
+            {
+            alert(" Sum : x + y = " + sum +  "   Number is odd!");
+            }
+            else
+            {
+            alert("Not a number. Please write a number.");
+            }                    
+        </script>
+    </body>
+    <footer>
+        <p>Created by<a href= "https://www.boverock.se/">www.boverock.se</a></p>
+    </footer>
+</html>
+
+
